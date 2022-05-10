@@ -1,0 +1,315 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #00875140;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.table img{
+  display: block;
+  width: 40%;
+  height: 50%;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#admin-body a{
+  color: #333;
+  text-transform: lowercase;
+  background: #ffffff;
+  border: 1px solid #008750;
+  padding: 0.5rem 1rem;
+  border-radius: 10%;
+  box-shadow: 0px 0px 2px rgb(10, 241, 122);
+}
+
+#admin-body a:hover{
+  color: #fff;
+}
+
+#admin-body{
+  margin-bottom: 3rem;
+}
+
+#admin-section{
+  background: #fff;
+  padding: 0.9rem;
+  margin: 2.5rem auto;
+  height: 10rem;
+  width: 80%;
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+#admin-body h2{
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+#admin-body p {
+  font-size: 1.1rem;
+}
+
+#admin-body .admin-menu{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 90%;
+  margin: 0 auto; 
+}  
+
+#admin-body .links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; 
+  margin: 1rem 0;
+} 
+
+#admin-body .button{
+  display: inline-block;
+  font-weight: 550;
+  font-size: 1rem;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5rem;
+  letter-spacing: 0.05rem;
+  border: 2px solid #008750;
+}
+
+#admin-body a.button{
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+#admin-body .button:hover{
+  background: #008756;
+  color: #fff;
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+/* table  */
+
+#party{
+  background: #fff;
+  padding: 0.9rem;
+  width: 70%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#party .party-menu{
+  margin-top: 3rem;
+  align-content: center;
+}
+
+.party-header{
+  font-size: 2.4rem;
+  margin: 4rem 0 0;
+  text-align: center;
+  color: #333333;
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  border: none;
+  height: 30%;
+  margin: 2rem auto;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgb(10, 241, 122);
+  border-radius: 3px;
+}
+
+th {
+  height: 20px;
+  text-transform: uppercase;
+  border-right: none;
+}
+
+td {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td:last-child{
+  border-right: none;
+} 
+
+/* MODAL  */
+.modal{
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-content{
+  cursor: pointer;
+  background-color: #fefefe;
+  margin: 10rem auto 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 14px #333;
+  width: 300px;
+}
+
+.modal h3{
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.modal-btn{
+  padding: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.btn-dark{
+  background-color: #333;
+}
+
+.btn-green:hover{
+  color: #333333;
+  background: #76e0b6;
+}
+
+.btn-dark:hover{
+  color: #333333;
+  background:#f4cccc;
+}
+
+/* EDIT */
+.edit-modal, .newgov-modal, .newpty-modal{
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit-modal-header, .newgov-modal-header, .newpty-modal-header{
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.edit-modal-content, .newgov-modal-content, .newpty-modal-content{
+  cursor: pointer;
+  background-color: #fefefe;
+  margin: 1rem auto 0 auto;
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 14px #333;
+  width: 300px;
+}
+
+.edit-modal input,
+.newgov-modal input,
+.newpty-modal input{
+  display: block;
+  width: 100%;
+  height: 2.3rem;
+  padding: 0.7rem;
+  border: 0.08rem solid #008751;
+  border-radius: 0.6rem;
+}
+
+.edit-modal input:focus,
+.newgov-modal input:focus{
+  outline: none;
+}
+
+.edit-modal input:hover,
+.newgov-modal input:hover,
+.newpty-modal input:hover{
+  background: #eeeeee;
+  border: 1px solid #008751;
+}
+
+::placeholder{
+  padding: 0.3rem;
+  text-transform: uppercase;
+}
+
+.edit-btn,
+.newgov-btn, .newpty-btn{
+  display: inline-block;
+  font-weight: 550;
+  font-size: 0.8rem;
+  margin: 1.5rem 1rem auto;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5rem;
+  letter-spacing: 0.05rem;
+  background: #008756;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn:hover,
+.newgov-btn:hover{
+  font-size: 1rem;
+  box-shadow: 0px 0px 4px rgb(10, 241, 122);
+}
+
+
+/* media  */
+@media(max-width: 500px){
+  #admin-section{
+    height: 12rem;
+    width: 85%;
+    box-shadow: none;
+  }
+
+  #admin-body .links{
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #admin-body .button{
+    padding: 0.3rem;
+  }
+
+  table{
+    width: 90%;
+  }
+}

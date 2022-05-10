@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="admin.css">
+  <title>2023 Election</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico.ico">
+</head>
+<body>
+  <header id="about-header">
+    <div class="about-container">
+      <nav id="main-nav">
+        <a href="#" class="logo-lead">
+          <img src="../img/logo-img.jpg" alt="politico" class="logo"><span class="logo-text">theElections</span>
+        </a>
+        <ul class="list">
+          <li><a href="../main-home.html" >Home</a></li>
+          <li><a href="../login.html">Login</a></li>
+          <li><a href="../ADMIN/Admin.html">Admin</a></li>
+          <li><a href="../VOTE/vote.html">vote</a></li>
+          <li><a href="../RESULT/result.html">Result</a></li>
+          <li><a href="../petition.html">Petition</a></li>
+          <li><a href="../applicationform.html">Apply for office</a></li>
+          <li><a href="../USER ACCOUNT/user.html">User Account</a></li>
+        </ul>
+      </nav>
+    </div> 
+  </header>
+   
+  <section id="admin-body">
+    <div id="admin-section">
+      <div class="admin-menu">
+        <h2>Wellcome!</h2>
+        <p id="adim-name">Richy Asika</p>
+        <div class="links">
+          <a href="#" class="button" id="govModal-btn">Create Government Office</a>
+            <a href="#" class="button btn2" id="ptyModal-btn">Create New Party</a>
+        </div>
+      </div>
+    </div>
+     <!-- PLITICAL PARTIES  -->
+     <div id="political party">
+      <div class="party-menu">
+        <h1 class="party-header">
+          Political Parties
+        </h1>
+        
+        <table class="table">
+          <tr>
+            <th>logo</th>
+            <th>Party Name</th>
+            <th>head quarter Address</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td><img src="./img/ACCORD.jpg" class=""></td>
+            <td> People Democratic Party</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/PDP.png" class=""> </td>
+            <td> Accord</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/ADC2.jpg" class=""> </td>
+            <td> All progressive congress</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="./img/ADC2.jpg" class=""> </td>
+            <td> Affican Action Congress</td>
+            <td>Lagos State</td>
+            <td>
+              <a href="" class="edit">edit</a>
+              <a href="" class="myBtn">delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  
+    <div id="government party">
+      <div class="party-menu">
+        <h1 class="party-header">
+          Government Office
+        </h1>
+
+        <table class="table">
+          <tr>
+            <th>id</th>
+            <th>office type</th>
+            <th>office name</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Federal</td>
+            <td>President</td>
+            <td>
+              <a href="#delete"  class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>State</td>
+            <td>House of rep.</td>
+            <td>
+              <a href="#delete" class="myBtn">delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Local Government</td>
+            <td>Chairman</td>
+            <td>
+              <a href="#" class="myBtn">delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delete Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Are you sure you want to delete?</h3>
+      <button class="modal-btn btn-green btn success succ-text"> Yes,Delete</button>
+      <button class="modal-btn btn-dark btn close"> No, Cancel</button>
+    </div>
+  </div>
+
+  <!-- The Modal Edit Profile -->
+  <div id="edit-modal" class="edit-modal">
+    <div class="edit-modal-content">
+      <form action="">
+        <h3 class="edit-modal-header">Update Party</h3>
+        <hr/>
+        <div class="field">
+          <label for="officename">Party Name:</label>
+          <input type="text" name="officename" id="officename" placeholder="officename" required>
+        </div>
+
+        <div class="field">
+          <label for="hqaddress">Head office address:</label>
+          <input type="text" name="hqaddress" id="hqaddress" placeholder="hqaddress" required>
+        </div>
+
+        <div class="field">
+          <label for="logo">logo:</label>
+          <input type="file" name="logo" id="logo" placeholder="logo" required>
+        </div>
+        <button type="submit" class="edit-btn">Update Party</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- The create gov modal -->
+  <div class="newgov-modal" id="newgov-modal">
+    <div class="newgov-modal-content">
+      <form action="">
+        <h3 class="newpty-modal-header">Create New Office</h3>
+        <hr/>
+        <div class="field">
+          <label for="officetype">Office Type:</label>
+          <input type="text" name="officetype" id="officetype" placeholder="officetype" required>
+        </div>
+
+        <div class="field">
+          <label for="officename">Office Name:</label>
+          <input type="file" name="officename" id="officename" placeholder="officename" required>
+        </div>
+        <button type="submit" class="newgov-btn">Create Office</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- The create new party modal -->
+  <div id="newpty-modal" class="newpty-modal">
+    <div class="newpty-modal-content">
+      <form action="">
+        <h3 class="newpty-modal-header">Create New Party</h3>
+        <hr/>
+        <div class="field">
+          <label for="officename">Party Name:</label>
+          <input type="text" name="officename" id="officename" placeholder="officename" required>
+        </div>
+
+        <div class="field">
+          <label for="hqaddress">Head office address:</label>
+          <input type="text" name="hqaddress" id="hqaddress" placeholder="hqaddress" required>
+        </div>
+
+        <div class="field">
+          <label for="logo">logo:</label>
+          <input type="file" name="logo" id="logo" placeholder="logo" required>
+        </div>
+        <button type="submit" class="newpty-btn">Create Party</button>
+      </form>
+    </div>
+  </div>
+ 
+
+  <footer id="main-footer">
+    <div class="footer-text">
+      <p>copywrite &copy 2023 Election Poll By Maureen Uzezi Ozakpumue</p>
+    </div>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
