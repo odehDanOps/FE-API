@@ -3,12 +3,14 @@ import cors from "cors"
 import dotenv from "dotenv-safe"
 import multer from "multer"
 import isAuth from "./utils/isAuth.js"
+import generateToken from "./utils/generateToken.js"
 import userRouter from "./ROUTES/userRouter.js";
 import partyRouter from "./ROUTES/partyRouter.js";
 import officeRouter from "./ROUTES/officeRouter.js";
 import candidateRouter from "./ROUTES/candidateRouter.js";
 import voteRouter from "./ROUTES/voteRouter.js";
 import petitionRouter from "./ROUTES/petitionRouter.js";
+import loginUserRouter from "./ROUTES/loginUser"
 // import mongoose from "mongoose" 
 
 dotenv.config()
@@ -37,9 +39,10 @@ app.use("/candidate", isAuth, candidateRouter)
 app.use("/vote", isAuth, voteRouter)
 
 app.use("/petition", isAuth, petitionRouter)
+app.use("/login", generateToken, loginUserRouter)
 
 
 
 app.listen(PORT, () => {
-  console.log(`server is running on http://localhost:${PORT}`) 
+  console.log(`server is running on http://localhost:${PORT}/api`) 
 })
